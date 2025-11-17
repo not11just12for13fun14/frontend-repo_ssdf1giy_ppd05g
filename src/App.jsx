@@ -1,26 +1,38 @@
-import { useState } from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Features from './components/Features'
+import Integrations from './components/Integrations'
+import Security from './components/Security'
+import Vision from './components/Vision'
+import CTA from './components/CTA'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-white text-gray-900">
+      <Navbar />
+      <main>
+        <Hero />
+        <Features />
+        <Integrations />
+        <Security />
+        <Vision />
+        <CTA />
+      </main>
+      <footer className="border-t border-black/5 py-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2">
+            <div className="h-7 w-7 rounded-full bg-gradient-to-br from-purple-500 via-blue-500 to-orange-400" />
+            <span className="text-sm font-medium">Popins.ai</span>
+          </div>
+          <p className="text-sm text-gray-600">© {new Date().getFullYear()} Popins, Inc. All rights reserved.</p>
+          <nav className="flex items-center gap-5 text-sm text-gray-600">
+            <a href="#security" className="hover:text-gray-900">Security</a>
+            <a href="#integrations" className="hover:text-gray-900">Integrations</a>
+            <a href="#product" className="hover:text-gray-900">Product</a>
+            <a href="#cta" className="hover:text-gray-900">Contact</a>
+          </nav>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }
