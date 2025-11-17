@@ -1,8 +1,8 @@
 function Feature({ title, desc }) {
   return (
-    <div className="p-6 rounded-xl border border-black/5 bg-white/70 backdrop-blur">
-      <h3 className="text-lg font-semibold">{title}</h3>
-      <p className="mt-2 text-gray-600">{desc}</p>
+    <div className="p-6 rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur hover:bg-white/[0.05] transition-colors">
+      <h3 className="text-lg font-semibold text-white">{title}</h3>
+      <p className="mt-2 text-white/70">{desc}</p>
     </div>
   )
 }
@@ -28,11 +28,11 @@ function Features() {
   ]
 
   return (
-    <section id="product" className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
+    <section id="product" className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">What Popins does</h2>
-          <p className="mt-3 text-gray-600">A private, AI-powered knowledge layer for your business, designed to make every employee smarter and more autonomous.</p>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">What Popins does</h2>
+          <p className="mt-3 text-white/70">A private, AI-powered knowledge layer for your business, designed to make every employee smarter and more autonomous.</p>
         </div>
 
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
